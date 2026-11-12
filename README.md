@@ -99,6 +99,28 @@ Run the test suite with:
 php artisan test
 ```
 
+## Screenshots
+
+### 1. URL Shortening
+
+![URL Shortening](screenshots/shorten-link.png)
+
+### 2. User Registration
+
+![Registration](screenshots/register.png)
+
+### 3. User Login
+
+![Login](screenshots/login.png)
+
+### 4. User Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### 5. Link Analytics
+
+![Analytics](screenshots/analytics.png)
+
 ## Author
 
 **Gabriel Komolafe**
