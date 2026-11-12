@@ -18,6 +18,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::middleware('auth')->group(function () {
     Route::get('/urls/{shortUrl}/analytics', [UrlAnalyticsController::class, 'show'])
     ->name('short-urls.analytics');
@@ -27,9 +31,6 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/urls/{shortUrl}', [ShortUrlController::class, 'destroy'])
         ->name('short-urls.destroy');
-
-    Route::get('/dashboard', [DashboardController::class, 'index'])
-        ->name('dashboard');
 });
 
 Route::post('/short-urls', StoreShortUrlController::class)
