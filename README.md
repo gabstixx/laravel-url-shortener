@@ -103,4 +103,4 @@ php artisan test
 
 **Gabriel Komolafe**
 
-GitHub: [Gab-stixx](https://github.com/Gab-stixx)
+GitHub: [gabstixx](https://github.com/gabstixx)
