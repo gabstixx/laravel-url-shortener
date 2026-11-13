@@ -1,50 +1,67 @@
-# Laravel URL Shortener with Click Analytics
+# Shortly — Laravel URL Shortener
 
-A URL shortening application built with Laravel that converts long URLs into short, shareable links and tracks visitor activity through click analytics.
+A Laravel-based URL shortener that converts long URLs into short, shareable links and tracks click analytics.
 
 ## Features
 
-- **URL Shortening:** Convert long URLs into unique six-character short links.
-- **Custom Aliases:** Choose a custom alias for a shortened URL.
-- **Link Expiration:** Set an optional expiration date for shortened links.
-- **Click Tracking:** Record visitor IP addresses, user agents, referrers, and click timestamps.
-- **User Authentication:** Register and log in to manage shortened URLs.
-- **Dashboard:** View total links, total clicks, active links, and manage created URLs.
-- **Link Management:** Activate, deactivate, and delete shortened URLs.
-- **Analytics:** View daily click counts, top referrers, and recent click activity.
-- **Rate Limiting:** Limit URL creation requests to prevent abuse.
+- Shorten long URLs into unique six-character codes.
+- Create custom aliases for shortened links.
+- Set expiration dates for links.
+- Redirect visitors to their original URLs.
+- Track clicks, including IP addresses, browser information, and referrers.
+- View daily click statistics and top referrer sources.
+- User authentication and email verification.
+- Dashboard with total links, clicks, and active links.
+- Enable or deactivate shortened links.
+- Delete shortened links.
+- Rate limiting on link creation.
+- Custom error page for expired or deactivated links.
 
-## Technologies Used
+## Tech Stack
 
 - PHP
-- Laravel
+- Laravel 12
 - MySQL
 - Blade
 - Tailwind CSS
-- JavaScript
 - Laravel Breeze
-- PHPUnit
+- JavaScript
 
-## Getting Started
+## Live Demo
 
-### Prerequisites
+[Shortly — URL Shortener](https://laravel-url-shortener.ethiodeploy.app)
 
-Make sure you have the following installed:
+## Screenshots
 
-- PHP 8.2 or later
-- Composer
-- Node.js and npm
-- MySQL
+### Landing Page
 
-### Installation
+![Landing Page](screenshots/shorten-link.png)
+
+### Registration
+
+![Registration](screenshots/register.png)
+
+### Login
+
+![Login](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Link Analytics
+
+![Analytics](screenshots/analytics.png)
+
+## Local Setup
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Gab-stixx/laravel-url-shortener.git
+    git clone https://github.com/gabstixx/laravel-url-shortener.git
     ```
 
-2. Navigate into the project directory:
+2. Enter the project directory:
 
     ```bash
     cd laravel-url-shortener
@@ -56,70 +73,49 @@ Make sure you have the following installed:
     composer install
     ```
 
-4. Create your environment file:
+4. Install frontend dependencies:
+
+    ```bash
+    npm install
+    ```
+
+5. Create your environment file:
 
     ```bash
     cp .env.example .env
     ```
 
-5. Generate the application key:
+6. Generate an application key:
 
     ```bash
     php artisan key:generate
     ```
 
-6. Create a MySQL database named `url_shortener` and configure your database credentials in the `.env` file.
+7. Configure your database credentials in `.env`.
 
-7. Run database migrations:
+8. Run migrations:
 
     ```bash
     php artisan migrate
     ```
 
-8. Install frontend dependencies and build the assets:
+9. Build frontend assets:
 
     ```bash
-    npm install
     npm run build
     ```
 
-9. Start the Laravel development server:
+10. Start the development server:
 
     ```bash
     php artisan serve
     ```
 
-10. Open `http://127.0.0.1:8000` in your browser.
-
 ## Running Tests
-
-Run the test suite with:
 
 ```bash
 php artisan test
 ```
-
-## Screenshots
-
-### 1. URL Shortening
-
-![URL Shortening](screenshots/shorten-link.png)
-
-### 2. User Registration
-
-![Registration](screenshots/register.png)
-
-### 3. User Login
-
-![Login](screenshots/login.png)
-
-### 4. User Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### 5. Link Analytics
-
-![Analytics](screenshots/analytics.png)
 
 ## Author
 
